@@ -35,9 +35,17 @@ const SignInForm = () => {
                 resetFormFields();
 
         } catch(error) {
-
-        
-            
+            // switch is an alternate form of using if statement
+            switch (error.code) {
+                case 'auth/wrong-password':
+                    alert('Incorrect password for email');
+                    break;
+                case 'auth/user-not-found':
+                    alert('No user associated with the email');
+                    break;
+                    default:
+                        console.log(error)
+            }
         }
     }
 
@@ -84,7 +92,7 @@ const SignInForm = () => {
 
                 <div className='buttons-container'>
                     <Button type='submit'>Sign In</Button>
-                    <Button buttonType='google' onClick={signInWithGoogle}>
+                    <Button type='button' buttonType='google' onClick={signInWithGoogle}>
                     Google Sign In
                     </Button>
                 </div>
