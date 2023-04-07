@@ -3,7 +3,6 @@ import Button from "../button/button.component";
 import { useState } from "react";
 
 import { signInWithGooglePopup,
-    createUserDocumentFromAuth,
     signInAuthUserWithEmailAndPassword 
 } from '../../utils/firebase/firebase.utils';
 
@@ -29,7 +28,7 @@ const SignInForm = () => {
         e.preventDefault();
     
         try {
-            const {user} = await signInAuthUserWithEmailAndPassword(
+            await signInAuthUserWithEmailAndPassword(
                 email, 
                 password
                 );
