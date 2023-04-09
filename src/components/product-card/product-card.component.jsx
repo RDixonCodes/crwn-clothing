@@ -20,7 +20,7 @@ return (
             <span className='price'> ${price}.00</span>
 
         </div>
-        <Button buttonType='inverted' onClick={addProductToCart}>ADD TO CART</Button>
+        <Button buttonType='inverted' onClick={addProductToCart}>add to cart</Button>
     </div>
 )
 }

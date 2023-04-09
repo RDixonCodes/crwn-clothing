@@ -90,7 +90,7 @@ const SignInForm = () => {
                 />
 
                 <div className='buttons-container'>
-                    <Button type='submit'>Sign In</Button>
+                    <Button type='submit'>sign in</Button>
                     <Button type='button' buttonType='google' onClick={signInWithGoogle}>
                     Google Sign In
                     </Button>
