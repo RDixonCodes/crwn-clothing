@@ -17,7 +17,7 @@ return (
         <img src={imageUrl} alt={`${name}`} />
         <div className='footer'>
             <span className='name'>{name}:</span>
-            <span className='price'> ${price}.00</span>
+            <span className='price'> ${price}</span>
 
         </div>
         <Button buttonType='inverted' onClick={addProductToCart}>add to cart</Button>
