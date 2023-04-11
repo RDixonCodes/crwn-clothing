@@ -10,8 +10,9 @@ const App = () => {
   return (
     <Routes>
       <Route path='/' element={<Navigation />}>
-        <Route index element={<Home />}/> 
-        <Route path='shop' element={<Shop />}/> 
+        <Route index element={<Home />}/>
+        {/* placing /* after route name will enable route nesting  */}
+        <Route path='shop/*' element={<Shop />}/> 
         <Route path='auth' element={<SignIn />}/>
         <Route path='checkout' element={<Checkout/>}/>
       </Route>
