@@ -1,16 +1,16 @@
-import './directory-item.styles.scss';
+import { DirectoryItemContainer, DirectoryItemBody, BackgroundImage } from "./directory-item.styles";
 
 //destructure category
 const DirectoryItem = ({category: {title, imageUrl}}) => {
 
     return (
-        <div className="directory-item-container">
-        <div className="background-image"  style={{backgroundImage: `url(${imageUrl})`}}/>
-        <div className="directory-item-body">
+        <DirectoryItemContainer>
+        <BackgroundImage  imageUrl={imageUrl}/>
+        <DirectoryItemBody>
           <h2>{title}</h2>
           <p>SHOP NOW</p>
-        </div>
-      </div>
+        </DirectoryItemBody>
+      </DirectoryItemContainer>
     )
 }
 
