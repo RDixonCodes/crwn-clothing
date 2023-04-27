@@ -1,6 +1,6 @@
 # CRWN-Clothing App
 
-![image](https://user-images.githubusercontent.com/73620531/234752716-4bdd784a-df0d-4f28-9a96-5543f1e2ffdc.png)
+![Firebase](https://img.shields.io/badge/Firebase-039BE5?style=for-the-badge&logo=Firebase&logoColor=white)
 
 - Application built using React.
 - Leverages Firebase cloud firestore used for back end management.
