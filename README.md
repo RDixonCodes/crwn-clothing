@@ -1,7 +1,9 @@
 # CRWN-Clothing App
 
-- This application was built using React.
-- Firebase cloud firestore is used for back end management.
+![image](https://user-images.githubusercontent.com/73620531/234752716-4bdd784a-df0d-4f28-9a96-5543f1e2ffdc.png)
+
+- Application built using React.
+- Leverages Firebase cloud firestore used for back end management.
 - Google sign in integration helps to manage user authorization.
 - Styled components are used to help streamline styling.
 
