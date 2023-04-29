@@ -120,7 +120,7 @@ export const CartProvider = ({children}) => {
     const clearItemFromCart = (cartItemToClear) => {
         const newCartItems = (clearCartItem( cartItems, cartItemToClear));
         updateCartItemsReducer(newCartItems);
-    } 
+    }; 
 
     const setIsCartOpen =(bool) => {
 
