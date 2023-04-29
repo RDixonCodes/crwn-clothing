@@ -2,9 +2,9 @@
 
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)![Firebase](https://img.shields.io/badge/Firebase-039BE5?style=for-the-badge&logo=Firebase&logoColor=white)
 
-- Application built using React.
-- Leverages Firebase cloud firestore used for back end management.
-- Google sign in integration helps to manage user authorization.
+- Website  architected using React that leverages Firebase cloud firestore  for backend support.
+- Leveraged Redux for a coherent global state for optimal performance, easy debugging and data persistence across multiple components
+- Google sign in integration for authorization and  to ease facilitation of  user information
 - Styled components are used to help streamline styling.
 
 https://fantastic-naiad-2da34b.netlify.app/
