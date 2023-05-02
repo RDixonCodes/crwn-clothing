@@ -6,7 +6,6 @@
 - Leveraged Redux for a coherent global state for optimal performance, easy debugging and data persistence across multiple components
 - Google sign in integration for authorization and  to ease facilitation of  user information
 - Styled components are used to help streamline styling.
-- Redux persist for local state management.
 
 https://fantastic-naiad-2da34b.netlify.app/
 
