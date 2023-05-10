@@ -6,7 +6,10 @@ import {
     signInSuccess, 
     signInFailed,
     signUpSuccess, 
-    signUpFailed
+    signUpFailed,
+    signOutSuccess,
+    signOutStart,
+    signOutFailed,
 } from "./user.action";
 
 import { 
@@ -14,7 +17,8 @@ import {
     createUserDocumentFromAuth, 
     signInWithGooglePopup, 
     signInAuthUserWithEmailAndPassword ,
-    createAuthUserWithEmailAndPassword
+    createAuthUserWithEmailAndPassword,
+    signOutUser
 } from "../../utils/firebase/firebase.utils";
 
 export function* getSnapshotFromUserAuth(userAuth, additionalDetails) {
@@ -30,7 +34,7 @@ export function* getSnapshotFromUserAuth(userAuth, additionalDetails) {
     } catch(error) {
         yield put(signInFailed(error));
     }
-}
+};
 
 export function* signInWithGoogle() {
     try {
@@ -39,7 +43,7 @@ export function* signInWithGoogle() {
     } catch(error) {
         yield put(signInFailed(error))
     }
-}
+};
 
 export function* signInWithEmail({ payload: {email, password} }) {
     try {
@@ -52,7 +56,7 @@ export function* signInWithEmail({ payload: {email, password} }) {
     } catch(error) {
         yield put(signInFailed(error))
     }
-}
+};
 
 export function* isUserAuthenticated() {
     try {
@@ -75,7 +79,16 @@ export function* signUp({payload: {email, password, displayName}}) {
     } catch (error) {
         yield put(signUpFailed(error))
     }
-}
+};
+
+export function* signOut() {
+    try {
+        yield call(signOutUser);
+        yield put(signOutSuccess());
+    } catch (error) {
+        yield put(signOutFailed(error))
+    }
+};
 
 export function* signInAfterSignUp({ payload: { user, additionalDetails} }) {
     yield call(
@@ -104,6 +117,11 @@ export function* onSignUpSuccess() {
     yield takeLatest(USER_ACTION_TYPES.SIGN_UP_SUCCESS, signInAfterSignUp)
 }
 
+export function* onSignOutStart() {
+    yield takeLatest(USER_ACTION_TYPES.SIGN_OUT_START, signOut)
+}
+
+
 export function* userSagas() {
     yield all(
         [call(onCheckUserSession), 
@@ -111,5 +129,6 @@ export function* userSagas() {
         call(onEmailSignInStart),
         call(onSignUpStart),
         call(onSignUpSuccess),
+        call(onSignOutStart),
     ]);
 }
