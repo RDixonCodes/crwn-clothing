@@ -5,6 +5,7 @@
 - Website  architected using React that leverages Firebase cloud firestore  for backend support
 - Leveraged Redux for a coherent global state for optimal performance, easy debugging and data persistence across multiple components
 - Google sign in integration for authorization and  to ease facilitation of  user information
+- Stripe payment integration for smooth checkout experience
 - Styled components are used to help streamline styling.
 
 https://fantastic-naiad-2da34b.netlify.app/
