@@ -8,7 +8,6 @@ import {
     signUpSuccess, 
     signUpFailed,
     signOutSuccess,
-    signOutStart,
     signOutFailed,
 } from "./user.action";
 
@@ -90,6 +89,7 @@ export function* signOut() {
     }
 };
 
+// deconstruct action
 export function* signInAfterSignUp({ payload: { user, additionalDetails} }) {
     yield call(
         getSnapshotFromUserAuth, 
