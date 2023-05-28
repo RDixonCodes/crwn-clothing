@@ -1,6 +1,6 @@
 import FormInput from "../form-input/form-input.component";
 import Button, { BUTTON_TYPE_CLASSES } from "../button/button.component";
-import { useState } from "react";
+import { useState, FormEvent, ChangeEvent } from "react";
 import { useDispatch } from "react-redux";
 
 import { 
@@ -30,7 +30,7 @@ const SignInForm = () => {
         setFormFields(defaultFormFields)
     }
 
-    const handleSubmit = async (e) => {
+    const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
     
         try {
@@ -39,20 +39,11 @@ const SignInForm = () => {
 
         } catch(error) {
             // switch is an alternate form of using if statement
-            switch (error.code) {
-                case 'auth/wrong-password':
-                    alert('Incorrect password for email');
-                    break;
-                case 'auth/user-not-found':
-                    alert('No user associated with that email');
-                    break;
-                    default:
-                        console.log(error)
-            }
+            console.log('user sign in failed', error)
         }
     }
 
-    const handleChange = (e) => {
+    const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
         const {name, value} = e.target;
         setFormFields({...formFields, [name]: value})
     }
