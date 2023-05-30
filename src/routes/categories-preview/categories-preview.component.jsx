@@ -23,10 +23,7 @@ const CategoriesPreview = () => {
                         />)
     
                     }
-                )}
-            
-                
-            
+                )} 
         </Fragment>
     )
 }

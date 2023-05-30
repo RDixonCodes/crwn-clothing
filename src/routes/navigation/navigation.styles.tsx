@@ -27,6 +27,14 @@ export const NavLinks = styled.div`
   align-items: center;
   justify-content: flex-end;
 
+  @media (max-width: 768px) {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  }
+
 `
 
 export const NavLink = styled(Link)`
