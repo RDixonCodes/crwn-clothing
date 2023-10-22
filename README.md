@@ -8,8 +8,11 @@
 - Stripe payment integration for smooth checkout experience
 - Styled components are used to help streamline styling.
 
+<img width="1430" alt="crwn_screenshot" src="https://github.com/RDixonCodes/crwn-clothing/assets/73620531/c86458c6-2748-420a-86a7-6e3039c07e0d">
+
+
 [CRWN Clothing App](https://fantastic-naiad-2da34b.netlify.app/)
 
 
-https://user-images.githubusercontent.com/73620531/232346059-7e63074c-2dae-4d69-b1c4-177392a821e1.mov
+
 
